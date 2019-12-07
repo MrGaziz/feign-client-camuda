@@ -15,7 +15,7 @@ import java.util.Optional;
 @FeignClient(name="ServiceFeignClient",url = "http://192.168.10.157:6060")
 public interface ServiceFeignClient {
 
-        @GetMapping("/employee/search/user/${id}")
+        @GetMapping("/employee/search/user/{id}")
         ResponseEntity<Example> byUsername(@PathVariable String id);
 
 }
